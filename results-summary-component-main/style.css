@@ -1,0 +1,84 @@
+body {
+    font-family: Hanken Grotesk, sans-serif;
+    font-size: 18px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.result, .summary {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+  }
+
+
+.result {
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    text-align: center;
+    color: hsl(0, 0%, 100%);
+    border-radius: 25px;
+}
+
+h1 {
+    font-size: 14px;
+}
+
+.score-section {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: #fff;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.summary {
+    margin-left: 30px;
+}
+
+.reaction {
+    background-color: rgba(255, 87, 87, 0.192);
+    color: hsl(0, 100%, 67%);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.212);
+    color: hsl(39, 100%, 56%);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.208);
+    color: hsl(166, 100%, 37%);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.24);
+    color: hsl(234, 85%, 45%);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+button {
+    background-color: hsl(224, 30%, 27%);
+    color:hsl(0, 0%, 100%);
+    padding: 10px;
+    width: 100%;
+    border-radius: 24px;
+}
