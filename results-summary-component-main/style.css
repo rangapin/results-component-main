@@ -1,84 +1,164 @@
 body {
+    padding: 0;
+    margin: 0;
+    border-style: none;
     font-family: Hanken Grotesk, sans-serif;
     font-size: 18px;
 }
 
-.card {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 50vw;
 }
 
 .result, .summary {
+    height: 50%;
     width: 50%;
     float: left;
     box-sizing: border-box;
-  }
-
+    padding-right: 20px;
+}
 
 .result {
-    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 45vh;
+    background: linear-gradient(to bottom, hsl(252, 100%, 62%), hsl(241, 81%, 54%));
     text-align: center;
-    color: hsl(0, 0%, 100%);
+    color: lightgray;
     border-radius: 25px;
+    position: relative;
+    padding-right: 50px;
+}
+
+p.score {
+    color: lightgray;
+
 }
 
 h1 {
     font-size: 14px;
 }
 
+.result h1 {
+    position: absolute;
+    top: 1%;
+    left: 33%;
+    padding-top: 18px;
+    font-size: 18px;
+}
+
 .score-section {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to top, rgba(121, 87, 255, 0.306), hsla(241, 81%, 54%));
     border-radius: 50%; 
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     color: #fff;
+    place-items: center;
+    position: absolute; 
+    top: 40%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+}
+
+.score-comment {
+    position: absolute; 
+    top: 75%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 11px;
 }
 
 h2 {
-    font-size: 16px;
+    padding-top: 1em;
+    font-size: 18px;
+}
+
+span {
+    font-size: 3em;
+    color: hsl(0, 0%, 100%);
+
 }
 
 .summary {
-    margin-left: 30px;
+   box-shadow: 10px 10px 8px hsl(221, 100%, 96%);
+   padding-left: 28px;
+   width: 20vw;
+   border-bottom-right-radius: 25px;
+   border-top-right-radius: 25px;
+   background-color: white;
 }
 
-.reaction {
+.reaction, .memory, .verbal, .visual {
     background-color: rgba(255, 87, 87, 0.192);
     color: hsl(0, 100%, 67%);
     border-radius: 8px;
     padding: 10px;
 }
 
+.reaction, .memory, .verbal, .visual, p {
+    font-size: small;
+}
+
+img {
+    margin-right: 10px;
+}
+
+.reaction span{
+    font-size: 18px;
+    position: relative;
+    left: 35%;
+}
+
 .memory {
     background-color: hsla(39, 100%, 56%, 0.212);
     color: hsl(39, 100%, 56%);
-    border-radius: 8px;
-    padding: 10px;
+}
+
+.memory span{
+    font-size: 18px;
+    position: relative;
+    left: 35%;
 }
 
 .verbal {
     background-color: hsla(166, 100%, 37%, 0.208);
     color: hsl(166, 100%, 37%);
-    border-radius: 8px;
-    padding: 10px;
+}
+
+.verbal span{
+    font-size: 18px;
+    position: relative;
+    left: 40%;
 }
 
 .visual {
     background-color: hsla(234, 85%, 45%, 0.24);
     color: hsl(234, 85%, 45%);
-    border-radius: 8px;
-    padding: 10px;
+}
+
+.visual span{
+    font-size: 18px;
+    position: relative;
+    left: 40%;
 }
 
 button {
     background-color: hsl(224, 30%, 27%);
     color:hsl(0, 0%, 100%);
     padding: 10px;
+    margin-top: 1em;
     width: 100%;
     border-radius: 24px;
 }
