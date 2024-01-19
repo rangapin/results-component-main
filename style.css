@@ -1,7 +1,4 @@
 body {
-    padding: 0;
-    margin: 0;
-    border-style: none;
     font-family: Hanken Grotesk, sans-serif;
     font-size: 18px;
 }
@@ -17,11 +14,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 800px;
-    width: 50vw;
+    height: 90vh;
+    width: 35vw;
 }
 
-.result, .summary {
+.result,
+.summary {
     height: 50%;
     width: 50%;
     float: left;
@@ -41,7 +39,7 @@ body {
 
 p.score {
     color: lightgray;
-
+    font-size: 20px;
 }
 
 h1 {
@@ -51,32 +49,32 @@ h1 {
 .result h1 {
     position: absolute;
     top: 1%;
-    left: 33%;
+    left: 37%;
     padding-top: 18px;
     font-size: 18px;
 }
 
 .score-section {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 40%;
     background: linear-gradient(to top, rgba(121, 87, 255, 0.306), hsla(241, 81%, 54%));
-    border-radius: 50%; 
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     place-items: center;
-    position: absolute; 
-    top: 40%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .score-comment {
-    position: absolute; 
-    top: 75%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 11px;
 }
 
@@ -88,26 +86,32 @@ h2 {
 span {
     font-size: 3em;
     color: hsl(0, 0%, 100%);
-
 }
 
 .summary {
-   box-shadow: 10px 10px 8px hsl(221, 100%, 96%);
-   padding-left: 28px;
-   width: 20vw;
-   border-bottom-right-radius: 25px;
-   border-top-right-radius: 25px;
-   background-color: white;
+    box-shadow: 10px 10px 8px hsl(221, 100%, 96%);
+    padding-left: 28px;
+    width: 20vw;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: white;
 }
 
-.reaction, .memory, .verbal, .visual {
+.reaction,
+.memory,
+.verbal,
+.visual {
     background-color: rgba(255, 87, 87, 0.192);
     color: hsl(0, 100%, 67%);
     border-radius: 8px;
     padding: 10px;
 }
 
-.reaction, .memory, .verbal, .visual, p {
+.reaction,
+.memory,
+.verbal,
+.visual,
+p {
     font-size: small;
 }
 
@@ -115,50 +119,125 @@ img {
     margin-right: 10px;
 }
 
-.reaction span{
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.150);
+}
+
+.reaction span {
     font-size: 18px;
     position: relative;
     left: 35%;
+    color: gray;
 }
 
 .memory {
-    background-color: hsla(39, 100%, 56%, 0.212);
+    background-color: hsla(39, 100%, 46%, 0.150);
     color: hsl(39, 100%, 56%);
 }
 
-.memory span{
+.memory span {
     font-size: 18px;
     position: relative;
     left: 35%;
+    color: gray;
 }
 
 .verbal {
-    background-color: hsla(166, 100%, 37%, 0.208);
+    background-color: hsla(166, 100%, 37%, 0.150);
     color: hsl(166, 100%, 37%);
 }
 
-.verbal span{
+.verbal span {
     font-size: 18px;
     position: relative;
     left: 40%;
+    color: gray;
 }
 
 .visual {
-    background-color: hsla(234, 85%, 45%, 0.24);
+    background-color: hsla(234, 85%, 45%, 0.150);
     color: hsl(234, 85%, 45%);
 }
 
-.visual span{
+.visual span {
     font-size: 18px;
     position: relative;
     left: 40%;
+    color: gray;
 }
 
 button {
     background-color: hsl(224, 30%, 27%);
-    color:hsl(0, 0%, 100%);
-    padding: 10px;
-    margin-top: 1em;
+    color: hsl(0, 0%, 100%);
+    padding: 15px;
+    margin-top: 2em;
     width: 100%;
     border-radius: 24px;
+}
+
+/* For screens smaller than 768px (e.g., smartphones) */
+@media only screen and (max-width: 767px) {
+
+    body {
+        padding: 0;
+        margin: auto;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to full width */
+        width: 100%;
+    }
+
+    h2 {
+        margin-left: 20px;
+    }
+
+    .result,
+    .summary {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Occupy full width */
+    }
+
+    .result {
+        margin: 0;
+        padding: 0; /* No padding on mobile */
+        margin-bottom: 10px; /* Add margin between result and summary */
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+
+    }
+
+    .summary {
+        padding-left: 0; /* No padding on mobile */
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    button {
+        margin-bottom: auto;
+    }
+}
+
+/* For screens between 768px and 1024px (e.g., tablets) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .card {
+        width: 70vw;
+    }
+
+    .result {
+        width: 60vw;
+        padding-right: 10px;
+    }
+
+    .summary {
+        width: 60vw;
+        padding-left: 10px;
+    }
 }
